@@ -2,10 +2,11 @@ var c = document.getElementById("myCanvas")
 var ctx = c.getContext("2d")
 //image
 var images
-createImage("Squeekee-Duel-Menu-Background.png")
-function createImage(incompleteScr){
-	images.push(new Image())
-	images[images.length].scr = "https://i.ibb.co/G3GWSqp/" + incompleteScr
+createImage("background","Squeekee-Duel-Menu-Background.png")
+function createImage(imageName,incompleteScr){
+	//images.push()
+	images[imageName] = new Image()
+	images[imageName].scr = "https://i.ibb.co/G3GWSqp/" + incompleteScr
 }
 function requirements(){
 	scrollTo(10, 10);
@@ -14,3 +15,4 @@ function requirements(){
 	pixelWidth = window.innerWidth/1366
 	pixelHeight = window.innerHeight/768
 }
+drawImage(images[0],0,0,ctx.canvas.width,ctx.canvas.height)
