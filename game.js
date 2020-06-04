@@ -15,4 +15,4 @@ function requirements(){
 	pixelWidth = window.innerWidth/1366
 	pixelHeight = window.innerHeight/768
 }
-drawImage(images[0],0,0,ctx.canvas.width,ctx.canvas.height)
+drawImage(images.background,0,0,ctx.canvas.width,ctx.canvas.height)
